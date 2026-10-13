@@ -1,0 +1,96 @@
+{
+  "config": {
+    "model": {
+      "model": "mock-scripted-v1",
+      "base_url": "https://api.openai.com/v1",
+      "temperature": 0,
+      "max_tokens": 3000
+    },
+    "mode": "strict",
+    "case_count": 3,
+    "approved_edge_count": 0
+  },
+  "results": [
+    {
+      "case_id": "Q01",
+      "source": "PROJECT_AUTHORED_NOT_EXCEL",
+      "mode": "strict",
+      "levels": {
+        "S1": "L1",
+        "S2": "L4"
+      },
+      "selected": [
+        "S1"
+      ],
+      "baseline_a": {
+        "methods": [
+          "重要极限",
+          "洛必达法则"
+        ],
+        "reason": "模拟模型直接建议；未经人工正确性审查"
+      },
+      "baseline_b": {
+        "selected_solution_ids": [
+          "S1",
+          "S2"
+        ],
+        "reason": "模拟模型判定；未经人工正确性审查"
+      },
+      "review_status": "NOT_HUMAN_ADJUDICATED"
+    },
+    {
+      "case_id": "Q02",
+      "source": "PROJECT_AUTHORED_NOT_EXCEL",
+      "mode": "strict",
+      "levels": {
+        "S1": "L3",
+        "S2": "L4"
+      },
+      "selected": [],
+      "baseline_a": {
+        "methods": [
+          "三角恒等变形",
+          "泰勒展开"
+        ],
+        "reason": "模拟模型直接建议"
+      },
+      "baseline_b": {
+        "selected_solution_ids": [
+          "S1",
+          "S2"
+        ],
+        "reason": "模拟模型判定"
+      },
+      "review_status": "NOT_HUMAN_ADJUDICATED"
+    },
+    {
+      "case_id": "Q03",
+      "source": "PROJECT_AUTHORED_NOT_EXCEL",
+      "mode": "strict",
+      "levels": {
+        "S1": "L1",
+        "S2": "L3"
+      },
+      "selected": [
+        "S1"
+      ],
+      "baseline_a": {
+        "methods": [
+          "重要极限",
+          "洛必达法则"
+        ],
+        "reason": "模拟模型直接建议"
+      },
+      "baseline_b": {
+        "selected_solution_ids": [
+          "S1",
+          "S2"
+        ],
+        "reason": "模拟模型判定"
+      },
+      "review_status": "NOT_HUMAN_ADJUDICATED"
+    }
+  ],
+  "metrics": null,
+  "metrics_reason": "No human-reviewed ground truth; model judgments are not accuracy labels"
+}

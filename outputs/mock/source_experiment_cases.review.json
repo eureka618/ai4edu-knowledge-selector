@@ -1,0 +1,218 @@
+[
+  {
+    "question": {
+      "question_id": "T099",
+      "text": "例 1. 求 $\\lim_{x \\to 1} \\frac{\\sqrt{x}-1}{\\sqrt[3]{x}-1}$.",
+      "source": "EXCEL_题目节点",
+      "source_row": 100
+    },
+    "profile": {
+      "student_id": "SCENARIO_T099",
+      "explicit_mastered": [
+        "N022"
+      ],
+      "explicit_not_mastered": [
+        "N035",
+        "N024"
+      ]
+    }
+  },
+  {
+    "question": {
+      "question_id": "T100",
+      "text": "例 2. 求 $\\lim_{x \\to 1} \\frac{x^3-3x+2}{x^3-x^2-x+1}$.",
+      "source": "EXCEL_题目节点",
+      "source_row": 101
+    },
+    "profile": {
+      "student_id": "SCENARIO_T100",
+      "explicit_mastered": [
+        "N022",
+        "N023"
+      ],
+      "explicit_not_mastered": [
+        "N035"
+      ]
+    }
+  },
+  {
+    "question": {
+      "question_id": "T101",
+      "text": "例 3. 求 $\\lim_{x \\to 0} \\frac{(x-\\arctan x)\\ln(1-x)}{e^{x^4}-1}$.",
+      "source": "EXCEL_题目节点",
+      "source_row": 102
+    },
+    "profile": {
+      "student_id": "SCENARIO_T101",
+      "explicit_mastered": [
+        "N022",
+        "N024"
+      ],
+      "explicit_not_mastered": [
+        "N035"
+      ]
+    }
+  },
+  {
+    "question": {
+      "question_id": "T102",
+      "text": "例 4. 求 $\\lim_{x \\to +\\infty} \\frac{\\pi - 2\\arctan x}{\\ln(1+x)-\\ln x}$.",
+      "source": "EXCEL_题目节点",
+      "source_row": 103
+    },
+    "profile": {
+      "student_id": "SCENARIO_T102",
+      "explicit_mastered": [
+        "N035",
+        "N022"
+      ],
+      "explicit_not_mastered": [
+        "N024"
+      ]
+    }
+  },
+  {
+    "question": {
+      "question_id": "T103",
+      "text": "例 5. 求 $\\lim_{x \\to +\\infty} \\frac{\\ln x}{x^a} \\ (a>0)$.",
+      "source": "EXCEL_题目节点",
+      "source_row": 104
+    },
+    "profile": {
+      "student_id": "SCENARIO_T103",
+      "explicit_mastered": [
+        "N022"
+      ],
+      "explicit_not_mastered": [
+        "N035",
+        "N024"
+      ]
+    }
+  },
+  {
+    "question": {
+      "question_id": "T104",
+      "text": "例 6. 求 $\\lim_{x \\to +\\infty} \\frac{x^2}{e^x}$.",
+      "source": "EXCEL_题目节点",
+      "source_row": 105
+    },
+    "profile": {
+      "student_id": "SCENARIO_T104",
+      "explicit_mastered": [
+        "N022",
+        "N023"
+      ],
+      "explicit_not_mastered": [
+        "N035"
+      ]
+    }
+  },
+  {
+    "question": {
+      "question_id": "T105",
+      "text": "例 7. 求 $\\lim_{x \\to \\infty} \\frac{x+\\sin x}{x+\\cos x}$.",
+      "source": "EXCEL_题目节点",
+      "source_row": 106
+    },
+    "profile": {
+      "student_id": "SCENARIO_T105",
+      "explicit_mastered": [
+        "N022",
+        "N024"
+      ],
+      "explicit_not_mastered": [
+        "N035"
+      ]
+    }
+  },
+  {
+    "question": {
+      "question_id": "T106",
+      "text": "例 8. 求 $\\lim_{x \\to 0^+} x \\ln x$.",
+      "source": "EXCEL_题目节点",
+      "source_row": 107
+    },
+    "profile": {
+      "student_id": "SCENARIO_T106",
+      "explicit_mastered": [
+        "N035",
+        "N022"
+      ],
+      "explicit_not_mastered": [
+        "N024"
+      ]
+    }
+  },
+  {
+    "question": {
+      "question_id": "T107",
+      "text": "例 9. 求 $\\lim_{x \\to 0} (\\frac{1}{x} - \\frac{1}{e^x-1})$.",
+      "source": "EXCEL_题目节点",
+      "source_row": 108
+    },
+    "profile": {
+      "student_id": "SCENARIO_T107",
+      "explicit_mastered": [
+        "N022"
+      ],
+      "explicit_not_mastered": [
+        "N035",
+        "N024"
+      ]
+    }
+  },
+  {
+    "question": {
+      "question_id": "T108",
+      "text": "例 10. 求 $\\lim_{x \\to 0^+} x^x$.",
+      "source": "EXCEL_题目节点",
+      "source_row": 109
+    },
+    "profile": {
+      "student_id": "SCENARIO_T108",
+      "explicit_mastered": [
+        "N022",
+        "N023"
+      ],
+      "explicit_not_mastered": [
+        "N035"
+      ]
+    }
+  },
+  {
+    "question": {
+      "question_id": "T109",
+      "text": "例 11. 求 $\\lim_{x \\to \\frac{\\pi}{4}} (\\tan x)^{\\tan 2x}$.",
+      "source": "EXCEL_题目节点",
+      "source_row": 110
+    },
+    "profile": {
+      "student_id": "SCENARIO_T109",
+      "explicit_mastered": [
+        "N022",
+        "N024"
+      ],
+      "explicit_not_mastered": [
+        "N035"
+      ]
+    }
+  },
+  {
+    "question": {
+      "question_id": "T110",
+      "text": "例 12. 求 $\\lim_{x \\to +\\infty} x^{\\frac{1}{x}}$.",
+      "source": "EXCEL_题目节点",
+      "source_row": 111
+    },
+    "profile": {
+      "student_id": "SCENARIO_T110",
+      "explicit_mastered": [
+        "N035",
+        "N022"
+      ],
+      "explicit_not_mastered": [
+        "N024"
+      ]
+    }
+  }
+]

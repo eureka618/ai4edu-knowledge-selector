@@ -1,0 +1,399 @@
+{
+  "case": {
+    "question": {
+      "question_id": "Q03",
+      "text": "求极限 $\\lim_{x\\to0}(e^x-1)/x$。",
+      "source": "PROJECT_AUTHORED_NOT_EXCEL",
+      "source_row": null
+    },
+    "profile": {
+      "student_id": "P03",
+      "explicit_mastered": [
+        "N023"
+      ],
+      "explicit_not_mastered": [
+        "N024"
+      ]
+    }
+  },
+  "mode": "strict",
+  "model_config": {
+    "model": "mock-scripted-v1",
+    "base_url": "https://api.openai.com/v1",
+    "temperature": 0,
+    "max_tokens": 3000
+  },
+  "generated": {
+    "solutions": [
+      {
+        "solution_id": "S1",
+        "name": "重要极限",
+        "steps": [
+          {
+            "step_id": "S1-1",
+            "content": "直接使用指数函数重要极限 lim(x→0)(e^x-1)/x=1。"
+          }
+        ],
+        "final_result": "1"
+      },
+      {
+        "solution_id": "S2",
+        "name": "洛必达法则",
+        "steps": [
+          {
+            "step_id": "S2-1",
+            "content": "原式为 0/0 型，洛必达法则给出 lim(x→0)e^x/1。"
+          },
+          {
+            "step_id": "S2-2",
+            "content": "由指数函数连续性，结果是 1。"
+          }
+        ],
+        "final_result": "1"
+      }
+    ]
+  },
+  "annotations": {
+    "solutions": [
+      {
+        "solution_id": "S1",
+        "steps": [
+          {
+            "step_id": "S1-1",
+            "content": "直接使用指数函数重要极限 lim(x→0)(e^x-1)/x=1。",
+            "knowledge": [
+              {
+                "concept": "重要极限",
+                "status": "MATCHED",
+                "node_ids": [
+                  "N023"
+                ],
+                "evidence": "直接引用指数型极限",
+                "unmapped_candidate": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "solution_id": "S2",
+        "steps": [
+          {
+            "step_id": "S2-1",
+            "content": "原式为 0/0 型，洛必达法则给出 lim(x→0)e^x/1。",
+            "knowledge": [
+              {
+                "concept": "洛必达法则",
+                "status": "AMBIGUOUS",
+                "node_ids": [
+                  "N024",
+                  "N053"
+                ],
+                "evidence": "使用 0/0 型洛必达",
+                "unmapped_candidate": null
+              },
+              {
+                "concept": "基本导数公式",
+                "status": "MATCHED",
+                "node_ids": [
+                  "N045"
+                ],
+                "evidence": "e^x 的导数为 e^x",
+                "unmapped_candidate": null
+              }
+            ]
+          },
+          {
+            "step_id": "S2-2",
+            "content": "由指数函数连续性，结果是 1。",
+            "knowledge": [
+              {
+                "concept": "函数连续性",
+                "status": "MATCHED",
+                "node_ids": [
+                  "N025"
+                ],
+                "evidence": "e^x 在 0 连续",
+                "unmapped_candidate": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "inferred_mastery_paths": {},
+  "checks": [
+    {
+      "solution_id": "S1",
+      "level": "L1",
+      "reasons": [],
+      "step_levels": {
+        "S1-1": "L1"
+      }
+    },
+    {
+      "solution_id": "S2",
+      "level": "L3",
+      "reasons": [
+        {
+          "step_id": "S2-1",
+          "concept": "洛必达法则",
+          "code": "AMBIGUOUS",
+          "node_ids": [
+            "N024",
+            "N053"
+          ],
+          "evidence": "使用 0/0 型洛必达",
+          "inference_path": []
+        },
+        {
+          "step_id": "S2-1",
+          "concept": "基本导数公式",
+          "code": "UNKNOWN",
+          "node_ids": [
+            "N045"
+          ],
+          "evidence": "e^x 的导数为 e^x",
+          "inference_path": []
+        },
+        {
+          "step_id": "S2-2",
+          "concept": "函数连续性",
+          "code": "UNKNOWN",
+          "node_ids": [
+            "N025"
+          ],
+          "evidence": "e^x 在 0 连续",
+          "inference_path": []
+        }
+      ],
+      "step_levels": {
+        "S2-1": "L3",
+        "S2-2": "L3"
+      }
+    }
+  ],
+  "selection": {
+    "status": "FEASIBLE",
+    "selected_solution_ids": [
+      "S1"
+    ],
+    "basis": "All explicitly mastered"
+  },
+  "baselines": {
+    "baseline_a": {
+      "methods": [
+        "重要极限",
+        "洛必达法则"
+      ],
+      "reason": "模拟模型直接建议"
+    },
+    "baseline_b": {
+      "selected_solution_ids": [
+        "S1",
+        "S2"
+      ],
+      "reason": "模拟模型判定"
+    }
+  },
+  "traces": [
+    {
+      "task": "generator",
+      "generation_config": {
+        "model": "mock-scripted-v1",
+        "base_url": "https://api.openai.com/v1",
+        "temperature": 0.0,
+        "max_tokens": 3000
+      },
+      "prompt": [
+        {
+          "role": "system",
+          "content": "You are a mathematics solver. Return JSON only: {solutions:[{solution_id,name,steps:[{step_id,content}],final_result}]}. Generate up to 3 genuinely different complete derivations. Do not assume they are correct. Do not use a student profile."
+        },
+        {
+          "role": "user",
+          "content": "求极限 $\\lim_{x\\to0}(e^x-1)/x$。"
+        }
+      ],
+      "raw_response": "{\"solutions\": [{\"solution_id\": \"S1\", \"name\": \"重要极限\", \"steps\": [{\"step_id\": \"S1-1\", \"content\": \"直接使用指数函数重要极限 lim(x→0)(e^x-1)/x=1。\"}], \"final_result\": \"1\"}, {\"solution_id\": \"S2\", \"name\": \"洛必达法则\", \"steps\": [{\"step_id\": \"S2-1\", \"content\": \"原式为 0/0 型，洛必达法则给出 lim(x→0)e^x/1。\"}, {\"step_id\": \"S2-2\", \"content\": \"由指数函数连续性，结果是 1。\"}], \"final_result\": \"1\"}]}",
+      "parsed": {
+        "solutions": [
+          {
+            "solution_id": "S1",
+            "name": "重要极限",
+            "steps": [
+              {
+                "step_id": "S1-1",
+                "content": "直接使用指数函数重要极限 lim(x→0)(e^x-1)/x=1。"
+              }
+            ],
+            "final_result": "1"
+          },
+          {
+            "solution_id": "S2",
+            "name": "洛必达法则",
+            "steps": [
+              {
+                "step_id": "S2-1",
+                "content": "原式为 0/0 型，洛必达法则给出 lim(x→0)e^x/1。"
+              },
+              {
+                "step_id": "S2-2",
+                "content": "由指数函数连续性，结果是 1。"
+              }
+            ],
+            "final_result": "1"
+          }
+        ]
+      }
+    },
+    {
+      "task": "annotator",
+      "generation_config": {
+        "model": "mock-scripted-v1",
+        "base_url": "https://api.openai.com/v1",
+        "temperature": 0.0,
+        "max_tokens": 3000
+      },
+      "prompt": [
+        {
+          "role": "system",
+          "content": "Independently identify every directly used mathematical concept in EACH step. Return JSON {solutions:[{solution_id,steps:[{step_id,content,knowledge:[{concept,status,node_ids,evidence,unmapped_candidate}]}]}]}. status is MATCHED, UNMAPPED, or AMBIGUOUS. A MATCHED item has one graph node ID, AMBIGUOUS has at least two, UNMAPPED has none. Include implicit dependencies where necessary. Candidate nodes are hints, not an exhaustive ontology. Do not force a match. Do not decide feasibility."
+        },
+        {
+          "role": "user",
+          "content": "{\"question\": {\"question_id\": \"Q03\", \"text\": \"求极限 $\\\\lim_{x\\\\to0}(e^x-1)/x$。\", \"source\": \"PROJECT_AUTHORED_NOT_EXCEL\", \"source_row\": null}, \"solutions\": {\"solutions\": [{\"solution_id\": \"S1\", \"name\": \"重要极限\", \"steps\": [{\"step_id\": \"S1-1\", \"content\": \"直接使用指数函数重要极限 lim(x→0)(e^x-1)/x=1。\"}], \"final_result\": \"1\"}, {\"solution_id\": \"S2\", \"name\": \"洛必达法则\", \"steps\": [{\"step_id\": \"S2-1\", \"content\": \"原式为 0/0 型，洛必达法则给出 lim(x→0)e^x/1。\"}, {\"step_id\": \"S2-2\", \"content\": \"由指数函数连续性，结果是 1。\"}], \"final_result\": \"1\"}]}, \"retrieved_candidates\": [{\"id\": \"N053\", \"raw_id\": \"NO53\", \"name\": \"洛必达法则\", \"description\": \"$\\\\frac{0}{0}$ 或 $\\\\frac{\\\\infty}{\\\\infty}$ 型不定式极限，若 $\\\\lim \\\\frac{f'(x)}{g'(x)}$ 存在，则 $\\\\lim \\\\frac{f(x)}{g(x)} = \\\\lim \\\\frac{f'(x)}{g'(x)}$。\", \"kind\": \"法则\", \"source_sheet\": \"知识点节点\", \"source_row\": 54, \"aliases\": []}, {\"id\": \"N024\", \"raw_id\": \"N024\", \"name\": \"洛必达法则\", \"description\": \"求未定式极限的法则\", \"kind\": \"定理\", \"source_sheet\": \"知识点节点\", \"source_row\": 25, \"aliases\": []}, {\"id\": \"N025\", \"raw_id\": \"N025\", \"name\": \"函数连续性\", \"description\": \"函数在某点处无间断的性质\", \"kind\": \"概念\", \"source_sheet\": \"知识点节点\", \"source_row\": 26, \"aliases\": []}, {\"id\": \"N023\", \"raw_id\": \"N023\", \"name\": \"重要极限\", \"description\": \"常用且重要的极限公式\", \"kind\": \"公式\", \"source_sheet\": \"知识点节点\", \"source_row\": 24, \"aliases\": []}, {\"id\": \"N109\", \"raw_id\": \"NO109\", \"name\": \"二元函数的极限\", \"description\": \"设函数 $z=f(x,y)$ 在点 $P_0 (x_0, y_0)$ 的某邻域内有定义（在点 $P_0$ 处是否有定义无关紧要）,A为某常数.如果对任意给定的 $\\\\\\\\varepsilon > 0$,存在 $\\\\\\\\delta > 0$,使当 $|x-x_0| < \\\\\\\\delta, |y-y_0| < \\\\\\\\delta$,且 $(x,y) \\\\\\\\neq (x_0, y_0)$ 时,恒有 $|f(x,y)-A| < \\\\\\\\varepsilon$成立,则称 $P(x,y) \\\\\\\\to P_0 (x_0, y_0)$ 时,函数 $f(x,y)$ 的极限为 A 或函数 $f(x,y)$ 以 $A$ 为极限.记为 $\\\\\\\\lim_{(x,y) \\\\\\\\to (x_0, y_0)} f(x,y) = A$ 或 $\\\\\\\\lim_{(x,y) \\\\\\\\to (x_0, y_0)} f(x,y) = A$.也可等价地定义为:如果对任给的 $\\\\\\\\varepsilon > 0$,存在 $\\\\\\\\delta > 0$,使当 $0 < \\\\\\\\rho = \\\\\\\\sqrt{(x-x_0)^2 + (y-y_0)^2} < \\\\\\\\delta$ 时,恒有 $|f(x,y)-A| < \\\\\\\\varepsilon$ 成立,则称 $P(x,y) \\\\\\\\to P_0 (x_0, y_0)$ 时,函数 $f(x,y)$ 以 $A$ 为极限.注意,由定义可知,点 $P(x,y)$ 趋于点 $P_0 (x_0, y_0)$ 的方式是任意的.当点 $P(x,y)$ 按某一特殊方式趋于点 $P_0 (x_0, y_0)$ 时函数 $f(x,y)$ 的极限存在,并不能保证点 $P(x,y)$ 趋于 $P_0 (x_0, y_0)$ 时 $f(x,y)$ 的极限也存在.\", \"kind\": \"概念\", \"source_sheet\": \"知识点节点\", \"source_row\": 110, \"aliases\": []}, {\"id\": \"N110\", \"raw_id\": \"NO110\", \"name\": \"二元函数的连续性\", \"description\": \"如果函数 $f(x,y)$ 在点 $P_0(x_0,y_0)$ 的某邻域内有定义,且有 $\\\\\\\\lim_{(x,y) \\\\\\\\to (x_0,y_0)} f(x,y) = f(x_0,y_0)$ 则称函数 $f(x,y)$ 在点 $P_0(x_0,y_0)$ 处连续,否则,称函数 $f(x,y)$ 在点 $P_0$ 处间断.由定义可知,函数 $f(x,y)$ 在点 $P_0(x_0,y_0)$ 处连续必须同时满足三个条件:(1) $f(x,y)$ 在点 $P_0$ 处有定义,(2) 极限 $\\\\\\\\lim_{(x,y) \\\\\\\\to (x_0,y_0)} f(x,y)$ 存在,(3) 该极限等于函数值 $f(x_0,y_0)$.如果函数 $f(x,y)$ 在区域 $D$ 上每一点都连续,则称 $f(x,y)$ 在区域 $D$ 上连续,或称 $f(x,y)$ 为区域 $D$ 上的连续函数.\", \"kind\": \"概念\", \"source_sheet\": \"知识点节点\", \"source_row\": 111, \"aliases\": []}, {\"id\": \"N039\", \"raw_id\": \"N039\", \"name\": \"导数的定义\", \"description\": \"极限 $\\\\lim_{\\\\Delta x \\\\to 0} \\\\frac{f(x_0+\\\\Delta x) - f(x_0)}{\\\\Delta x}$ 存在则称函数在 $x_0$ 处可导。函数在 $x_0$ 处可导的充要条件是左右导数存在且相等。\", \"kind\": \"定义\", \"source_sheet\": \"知识点节点\", \"source_row\": 40, \"aliases\": []}, {\"id\": \"N070\", \"raw_id\": \"NO70\", \"name\": \"两个重要极限\", \"description\": \"指 \\\\lim_{x\\\\to 0}\\\\frac{\\\\sin x}{x}=1 与 \\\\lim_{x\\\\to 0}(1+x)^{1/x}=e\", \"kind\": \"公式\", \"source_sheet\": \"知识点节点\", \"source_row\": 71, \"aliases\": []}, {\"id\": \"N111\", \"raw_id\": \"NO111\", \"name\": \"偏导数\", \"description\": \"设函数 $z=f(x, y)$ 在点 $(x_0, y_0)$ 的某个邻域内有定义.如果固定 $y=y_0$ 后,一元函数 $f(x, y_0)$ 在点 $x=x_0$ 处可导,即极限 $\\\\\\\\lim_{\\\\\\\\Delta x \\\\\\\\to 0} \\\\\\\\frac{f(x_0+\\\\\\\\Delta x, y_0) - f(x_0, y_0)}{\\\\\\\\Delta x}$ 存在,则称此极限值为函数 $z=f(x, y)$ 在点 $(x_0, y_0)$ 处关于自变量 $x$ 的偏导数,记为 $f_x'(x_0, y_0)$,或记为 $\\\\frac{\\\\\\\\partial}{\\\\\\\\partial x} f(x_0, y_0)$, $\\\\\\\\left.z_x'\\\\\\\\right|_{(x_0, y_0)}$, $\\\\\\\\left.\\\\\\\\frac{\\\\\\\\partial z}{\\\\\\\\partial x}\\\\\\\\right|_{(x_0, y_0)}$.由定义可知,函数 $z=f(x, y)$ 在点 $(x_0, y_0)$ 处的偏导数,可理解为该函数在点 $(x_0, y_0)$ 处沿 $x$ 轴和 $y$ 轴方向的变化率,即有 $f_x^{\\\\\\\\prime}\\\\\\\\left(x_0, y_0\\\\\\\\right)=\\\\\\\\left.\\\\\\\\frac{\\\\\\\\mathrm{d}}{\\\\\\\\mathrm{d} x} f\\\\\\\\left(x, y_0\\\\\\\\right)\\\\\\\\right|_{x=x_0}, f_y^{\\\\\\\\prime}\\\\\\\\left(x_0, y_0\\\\right)=\\\\\\\\left.\\\\frac{\\\\\\\\mathrm{d}}{\\\\\\\\mathrm{d} y} f\\\\\\\\left(x_0, y\\\\\\\\right)\\\\\\\\right|_{y=y_0}$\", \"kind\": \"概念\", \"source_sheet\": \"知识点节点\", \"source_row\": 112, \"aliases\": []}, {\"id\": \"N045\", \"raw_id\": \"N045\", \"name\": \"基本导数公式\", \"description\": \"常数、幂函数、指数函数、对数函数、三角函数和反三角函数的导数公式列表。\", \"kind\": \"公式\", \"source_sheet\": \"知识点节点\", \"source_row\": 46, \"aliases\": []}, {\"id\": \"N048\", \"raw_id\": \"N048\", \"name\": \"高阶导数\", \"description\": \"函数 $y=f(x)$ 的导数 $f'(x)$ 的导数称为二阶导数 $f''(x)$，更高阶导数依此类推。\", \"kind\": \"概念\", \"source_sheet\": \"知识点节点\", \"source_row\": 49, \"aliases\": []}, {\"id\": \"N057\", \"raw_id\": \"NO57\", \"name\": \"水平渐近线\", \"description\": \"$\\\\lim_{x \\\\to \\\\pm\\\\infty}f(x)=C$ 时，$y=C$ 为水平渐近线。\", \"kind\": \"概念\", \"source_sheet\": \"知识点节点\", \"source_row\": 58, \"aliases\": []}]}"
+        }
+      ],
+      "raw_response": "{\"solutions\": [{\"solution_id\": \"S1\", \"steps\": [{\"step_id\": \"S1-1\", \"content\": \"直接使用指数函数重要极限 lim(x→0)(e^x-1)/x=1。\", \"knowledge\": [{\"concept\": \"重要极限\", \"status\": \"MATCHED\", \"node_ids\": [\"N023\"], \"evidence\": \"直接引用指数型极限\", \"unmapped_candidate\": null}]}]}, {\"solution_id\": \"S2\", \"steps\": [{\"step_id\": \"S2-1\", \"content\": \"原式为 0/0 型，洛必达法则给出 lim(x→0)e^x/1。\", \"knowledge\": [{\"concept\": \"洛必达法则\", \"status\": \"AMBIGUOUS\", \"node_ids\": [\"N024\", \"N053\"], \"evidence\": \"使用 0/0 型洛必达\", \"unmapped_candidate\": null}, {\"concept\": \"基本导数公式\", \"status\": \"MATCHED\", \"node_ids\": [\"N045\"], \"evidence\": \"e^x 的导数为 e^x\", \"unmapped_candidate\": null}]}, {\"step_id\": \"S2-2\", \"content\": \"由指数函数连续性，结果是 1。\", \"knowledge\": [{\"concept\": \"函数连续性\", \"status\": \"MATCHED\", \"node_ids\": [\"N025\"], \"evidence\": \"e^x 在 0 连续\", \"unmapped_candidate\": null}]}]}]}",
+      "parsed": {
+        "solutions": [
+          {
+            "solution_id": "S1",
+            "steps": [
+              {
+                "step_id": "S1-1",
+                "content": "直接使用指数函数重要极限 lim(x→0)(e^x-1)/x=1。",
+                "knowledge": [
+                  {
+                    "concept": "重要极限",
+                    "status": "MATCHED",
+                    "node_ids": [
+                      "N023"
+                    ],
+                    "evidence": "直接引用指数型极限",
+                    "unmapped_candidate": null
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "solution_id": "S2",
+            "steps": [
+              {
+                "step_id": "S2-1",
+                "content": "原式为 0/0 型，洛必达法则给出 lim(x→0)e^x/1。",
+                "knowledge": [
+                  {
+                    "concept": "洛必达法则",
+                    "status": "AMBIGUOUS",
+                    "node_ids": [
+                      "N024",
+                      "N053"
+                    ],
+                    "evidence": "使用 0/0 型洛必达",
+                    "unmapped_candidate": null
+                  },
+                  {
+                    "concept": "基本导数公式",
+                    "status": "MATCHED",
+                    "node_ids": [
+                      "N045"
+                    ],
+                    "evidence": "e^x 的导数为 e^x",
+                    "unmapped_candidate": null
+                  }
+                ]
+              },
+              {
+                "step_id": "S2-2",
+                "content": "由指数函数连续性，结果是 1。",
+                "knowledge": [
+                  {
+                    "concept": "函数连续性",
+                    "status": "MATCHED",
+                    "node_ids": [
+                      "N025"
+                    ],
+                    "evidence": "e^x 在 0 连续",
+                    "unmapped_candidate": null
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task": "baseline_a",
+      "generation_config": {
+        "model": "mock-scripted-v1",
+        "base_url": "https://api.openai.com/v1",
+        "temperature": 0.0,
+        "max_tokens": 3000
+      },
+      "prompt": [
+        {
+          "role": "system",
+          "content": "Baseline A: using only the problem and student profile, propose available solution methods. Return JSON {methods:[string],reason:string}. No graph is provided."
+        },
+        {
+          "role": "user",
+          "content": "{\"question\": {\"question_id\": \"Q03\", \"text\": \"求极限 $\\\\lim_{x\\\\to0}(e^x-1)/x$。\", \"source\": \"PROJECT_AUTHORED_NOT_EXCEL\", \"source_row\": null}, \"profile\": {\"student_id\": \"P03\", \"explicit_mastered\": [\"N023\"], \"explicit_not_mastered\": [\"N024\"]}}"
+        }
+      ],
+      "raw_response": "{\"methods\": [\"重要极限\", \"洛必达法则\"], \"reason\": \"模拟模型直接建议\"}",
+      "parsed": {
+        "methods": [
+          "重要极限",
+          "洛必达法则"
+        ],
+        "reason": "模拟模型直接建议"
+      }
+    },
+    {
+      "task": "baseline_b",
+      "generation_config": {
+        "model": "mock-scripted-v1",
+        "base_url": "https://api.openai.com/v1",
+        "temperature": 0.0,
+        "max_tokens": 3000
+      },
+      "prompt": [
+        {
+          "role": "system",
+          "content": "Baseline B: inspect the complete candidate solutions and student profile, decide which solution IDs are within scope. Return JSON {selected_solution_ids:[string],reason:string}. Do not use a graph."
+        },
+        {
+          "role": "user",
+          "content": "{\"question\": {\"question_id\": \"Q03\", \"text\": \"求极限 $\\\\lim_{x\\\\to0}(e^x-1)/x$。\", \"source\": \"PROJECT_AUTHORED_NOT_EXCEL\", \"source_row\": null}, \"profile\": {\"student_id\": \"P03\", \"explicit_mastered\": [\"N023\"], \"explicit_not_mastered\": [\"N024\"]}, \"solutions\": {\"solutions\": [{\"solution_id\": \"S1\", \"name\": \"重要极限\", \"steps\": [{\"step_id\": \"S1-1\", \"content\": \"直接使用指数函数重要极限 lim(x→0)(e^x-1)/x=1。\"}], \"final_result\": \"1\"}, {\"solution_id\": \"S2\", \"name\": \"洛必达法则\", \"steps\": [{\"step_id\": \"S2-1\", \"content\": \"原式为 0/0 型，洛必达法则给出 lim(x→0)e^x/1。\"}, {\"step_id\": \"S2-2\", \"content\": \"由指数函数连续性，结果是 1。\"}], \"final_result\": \"1\"}]}}"
+        }
+      ],
+      "raw_response": "{\"selected_solution_ids\": [\"S1\", \"S2\"], \"reason\": \"模拟模型判定\"}",
+      "parsed": {
+        "selected_solution_ids": [
+          "S1",
+          "S2"
+        ],
+        "reason": "模拟模型判定"
+      }
+    }
+  ],
+  "limitations": [
+    "Mathematical correctness has not been verified",
+    "Missing knowledge annotations cannot be ruled out"
+  ]
+}

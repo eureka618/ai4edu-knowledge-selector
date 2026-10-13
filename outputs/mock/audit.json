@@ -1,0 +1,925 @@
+{
+  "counts": {
+    "nodes": 113,
+    "relations_nonblank": 143,
+    "questions": 345,
+    "question_links": 595,
+    "chapters": 8,
+    "chapter_links": 113,
+    "confirmed_prerequisites": 0
+  },
+  "raw_id_irregularities": [
+    {
+      "raw": "NO50",
+      "normalized": "N050",
+      "row": 51
+    },
+    {
+      "raw": "NO51",
+      "normalized": "N051",
+      "row": 52
+    },
+    {
+      "raw": "NO52",
+      "normalized": "N052",
+      "row": 53
+    },
+    {
+      "raw": "NO53",
+      "normalized": "N053",
+      "row": 54
+    },
+    {
+      "raw": "NO54",
+      "normalized": "N054",
+      "row": 55
+    },
+    {
+      "raw": "NO55",
+      "normalized": "N055",
+      "row": 56
+    },
+    {
+      "raw": "NO56",
+      "normalized": "N056",
+      "row": 57
+    },
+    {
+      "raw": "NO57",
+      "normalized": "N057",
+      "row": 58
+    },
+    {
+      "raw": "NO58",
+      "normalized": "N058",
+      "row": 59
+    },
+    {
+      "raw": "NO59",
+      "normalized": "N059",
+      "row": 60
+    },
+    {
+      "raw": "NO60",
+      "normalized": "N060",
+      "row": 61
+    },
+    {
+      "raw": "NO61",
+      "normalized": "N061",
+      "row": 62
+    },
+    {
+      "raw": "NO62",
+      "normalized": "N062",
+      "row": 63
+    },
+    {
+      "raw": "NO63",
+      "normalized": "N063",
+      "row": 64
+    },
+    {
+      "raw": "NO64",
+      "normalized": "N064",
+      "row": 65
+    },
+    {
+      "raw": "NO65",
+      "normalized": "N065",
+      "row": 66
+    },
+    {
+      "raw": "NO66",
+      "normalized": "N066",
+      "row": 67
+    },
+    {
+      "raw": "NO67",
+      "normalized": "N067",
+      "row": 68
+    },
+    {
+      "raw": "NO68",
+      "normalized": "N068",
+      "row": 69
+    },
+    {
+      "raw": "NO69",
+      "normalized": "N069",
+      "row": 70
+    },
+    {
+      "raw": "NO70",
+      "normalized": "N070",
+      "row": 71
+    },
+    {
+      "raw": "NO71",
+      "normalized": "N071",
+      "row": 72
+    },
+    {
+      "raw": "NO72",
+      "normalized": "N072",
+      "row": 73
+    },
+    {
+      "raw": "NO73",
+      "normalized": "N073",
+      "row": 74
+    },
+    {
+      "raw": "NO74",
+      "normalized": "N074",
+      "row": 75
+    },
+    {
+      "raw": "NO75",
+      "normalized": "N075",
+      "row": 76
+    },
+    {
+      "raw": "NO76",
+      "normalized": "N076",
+      "row": 77
+    },
+    {
+      "raw": "NO77",
+      "normalized": "N077",
+      "row": 78
+    },
+    {
+      "raw": "NO78",
+      "normalized": "N078",
+      "row": 79
+    },
+    {
+      "raw": "NO79",
+      "normalized": "N079",
+      "row": 80
+    },
+    {
+      "raw": "NO80",
+      "normalized": "N080",
+      "row": 81
+    },
+    {
+      "raw": "NO81",
+      "normalized": "N081",
+      "row": 82
+    },
+    {
+      "raw": "NO82",
+      "normalized": "N082",
+      "row": 83
+    },
+    {
+      "raw": "NO83",
+      "normalized": "N083",
+      "row": 84
+    },
+    {
+      "raw": "NO84",
+      "normalized": "N084",
+      "row": 85
+    },
+    {
+      "raw": "NO85",
+      "normalized": "N085",
+      "row": 86
+    },
+    {
+      "raw": "NO86",
+      "normalized": "N086",
+      "row": 87
+    },
+    {
+      "raw": "NO87",
+      "normalized": "N087",
+      "row": 88
+    },
+    {
+      "raw": "NO88",
+      "normalized": "N088",
+      "row": 89
+    },
+    {
+      "raw": "NO89",
+      "normalized": "N089",
+      "row": 90
+    },
+    {
+      "raw": "NO90",
+      "normalized": "N090",
+      "row": 91
+    },
+    {
+      "raw": "NO91",
+      "normalized": "N091",
+      "row": 92
+    },
+    {
+      "raw": "NO92",
+      "normalized": "N092",
+      "row": 93
+    },
+    {
+      "raw": "NO93",
+      "normalized": "N093",
+      "row": 94
+    },
+    {
+      "raw": "NO94",
+      "normalized": "N094",
+      "row": 95
+    },
+    {
+      "raw": "NO95",
+      "normalized": "N095",
+      "row": 96
+    },
+    {
+      "raw": "NO96",
+      "normalized": "N096",
+      "row": 97
+    },
+    {
+      "raw": "NO97",
+      "normalized": "N097",
+      "row": 98
+    },
+    {
+      "raw": "NO98",
+      "normalized": "N098",
+      "row": 99
+    },
+    {
+      "raw": "NO99",
+      "normalized": "N099",
+      "row": 100
+    },
+    {
+      "raw": "NO100",
+      "normalized": "N100",
+      "row": 101
+    },
+    {
+      "raw": "NO101",
+      "normalized": "N101",
+      "row": 102
+    },
+    {
+      "raw": "NO102",
+      "normalized": "N102",
+      "row": 103
+    },
+    {
+      "raw": "NO103",
+      "normalized": "N103",
+      "row": 104
+    },
+    {
+      "raw": "NO104",
+      "normalized": "N104",
+      "row": 105
+    },
+    {
+      "raw": "NO105",
+      "normalized": "N105",
+      "row": 106
+    },
+    {
+      "raw": "NO106",
+      "normalized": "N106",
+      "row": 107
+    },
+    {
+      "raw": "NO107",
+      "normalized": "N107",
+      "row": 108
+    },
+    {
+      "raw": "NO108",
+      "normalized": "N108",
+      "row": 109
+    },
+    {
+      "raw": "NO109",
+      "normalized": "N109",
+      "row": 110
+    },
+    {
+      "raw": "NO110",
+      "normalized": "N110",
+      "row": 111
+    },
+    {
+      "raw": "NO111",
+      "normalized": "N111",
+      "row": 112
+    },
+    {
+      "raw": "NO112",
+      "normalized": "N112",
+      "row": 113
+    },
+    {
+      "raw": "NO113",
+      "normalized": "N113",
+      "row": 114
+    }
+  ],
+  "normalized_id_collisions": {},
+  "duplicate_names_not_merged": {
+    "洛必达法则": [
+      "N024",
+      "N053"
+    ]
+  },
+  "invalid_knowledge_relations": [],
+  "invalid_question_links": [],
+  "invalid_chapter_links": [],
+  "relation_types": {
+    "前提": 3,
+    "基础": 9,
+    "应用": 17,
+    "包含": 19,
+    "支撑": 6,
+    "定义": 2,
+    "对应": 1,
+    "扩展": 7,
+    "属于": 27,
+    "基于": 16,
+    "与": 2,
+    "比较": 1,
+    "方法": 3,
+    "相关": 1,
+    "解释": 1,
+    "推广": 2,
+    "关联": 1,
+    "判别": 3,
+    "理论": 1,
+    "规则": 1,
+    "核心": 1,
+    "证明": 3,
+    "依赖": 2,
+    "应用于": 2,
+    "扩展自": 3,
+    "作用于": 4,
+    "适用于": 4,
+    "描述": 1
+  },
+  "relation_audit_statuses": {
+    "NEEDS_SEMANTIC_REVIEW": 30,
+    "NON_PREREQUISITE_OR_UNCLEAR": 113
+  },
+  "possible_semantic_conflicts": [
+    {
+      "row": 2,
+      "start": "N001:不等式求解",
+      "end": "N002:绝对值不等式",
+      "description": "函数概念是学习极限的前提",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 3,
+      "start": "N001:不等式求解",
+      "end": "N004:函数相等性判断",
+      "description": "函数概念是学习导数的基础",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 4,
+      "start": "N001:不等式求解",
+      "end": "N006:分段函数",
+      "description": "函数概念是学习积分的基础",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 5,
+      "start": "N002:绝对值不等式",
+      "end": "N003:区间表示",
+      "description": "极限是连续性的基础定义",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 6,
+      "start": "N002:绝对值不等式",
+      "end": "N004:函数相等性判断",
+      "description": "极限是导数的定义基础",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 7,
+      "start": "N002:绝对值不等式",
+      "end": "N009:函数单调性",
+      "description": "极限计算中应用洛必达法则",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 8,
+      "start": "N002:绝对值不等式",
+      "end": "N021:无穷小量阶比较",
+      "description": "极限包含无穷小量概念",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 9,
+      "start": "N002:绝对值不等式",
+      "end": "N022:极限计算",
+      "description": "极限包含无穷大量概念",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 10,
+      "start": "N002:绝对值不等式",
+      "end": "N023:重要极限",
+      "description": "极限支撑无穷小量阶比较",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 11,
+      "start": "N002:绝对值不等式",
+      "end": "N024:洛必达法则",
+      "description": "极限支撑极限计算方法",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 12,
+      "start": "N002:绝对值不等式",
+      "end": "N027:零点定理",
+      "description": "极限支撑重要极限公式",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 13,
+      "start": "N002:绝对值不等式",
+      "end": "N029:数列通项",
+      "description": "极限支撑洛必达法则应用",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 15,
+      "start": "N003:区间表示",
+      "end": "N030:极限定义",
+      "description": "连续性基础于间断点分类",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 16,
+      "start": "N003:区间表示",
+      "end": "N031:幂指函数",
+      "description": "连续性基础于分段函数连续性",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 17,
+      "start": "N003:区间表示",
+      "end": "N032:三角函数极限",
+      "description": "连续性应用于零点定理",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 18,
+      "start": "N004:函数相等性判断",
+      "end": "N005:函数定义域求解",
+      "description": "导数定义微分概念",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 19,
+      "start": "N004:函数相等性判断",
+      "end": "N006:分段函数",
+      "description": "导数与积分互为逆运算",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 20,
+      "start": "N004:函数相等性判断",
+      "end": "N010:函数有界性",
+      "description": "导数包含积的导数公式",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 21,
+      "start": "N004:函数相等性判断",
+      "end": "N013:函数复合",
+      "description": "单变量导数扩展为多元函数",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 22,
+      "start": "N004:函数相等性判断",
+      "end": "N014:反函数",
+      "description": "导数扩展为偏导数",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 23,
+      "start": "N005:函数定义域求解",
+      "end": "N012:函数周期性",
+      "description": "微分应用分部积分法",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 24,
+      "start": "N006:分段函数",
+      "end": "N007:函数求值",
+      "description": "积分包含不定积分",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 25,
+      "start": "N006:分段函数",
+      "end": "N008:函数图像",
+      "description": "积分包含定积分",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 26,
+      "start": "N006:分段函数",
+      "end": "N011:函数奇偶性",
+      "description": "积分包含换元积分法",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 27,
+      "start": "N006:分段函数",
+      "end": "N012:函数周期性",
+      "description": "积分包含分部积分法",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 28,
+      "start": "N006:分段函数",
+      "end": "N013:函数复合",
+      "description": "积分扩展为多元函数积分",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 29,
+      "start": "N006:分段函数",
+      "end": "N015:函数建模",
+      "description": "积分扩展为重积分",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 30,
+      "start": "N007:函数求值",
+      "end": "N006:分段函数",
+      "description": "不定积分属于积分范畴",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 31,
+      "start": "N008:函数图像",
+      "end": "N006:分段函数",
+      "description": "定积分属于积分范畴",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 32,
+      "start": "N009:函数单调性",
+      "end": "N002:绝对值不等式",
+      "description": "洛必达法则基于极限概念",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 34,
+      "start": "N009:函数单调性",
+      "end": "N029:数列通项",
+      "description": "洛必达法则应用于复杂极限",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 35,
+      "start": "N010:函数有界性",
+      "end": "N004:函数相等性判断",
+      "description": "积的导数公式属于导数法则",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 36,
+      "start": "N011:函数奇偶性",
+      "end": "N006:分段函数",
+      "description": "换元积分法属于积分方法",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 37,
+      "start": "N012:函数周期性",
+      "end": "N006:分段函数",
+      "description": "分部积分法属于积分方法",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 38,
+      "start": "N013:函数复合",
+      "end": "N001:不等式求解",
+      "description": "多元函数是函数的扩展",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 39,
+      "start": "N013:函数复合",
+      "end": "N014:反函数",
+      "description": "多元函数包含偏导数",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 40,
+      "start": "N013:函数复合",
+      "end": "N015:函数建模",
+      "description": "多元函数包含重积分",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 41,
+      "start": "N014:反函数",
+      "end": "N013:函数复合",
+      "description": "偏导数属于多元函数微分",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 42,
+      "start": "N015:函数建模",
+      "end": "N013:函数复合",
+      "description": "重积分属于多元函数积分",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 43,
+      "start": "N016:数列极限",
+      "end": "N001:不等式求解",
+      "description": "微积分包含函数概念",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 44,
+      "start": "N016:数列极限",
+      "end": "N002:绝对值不等式",
+      "description": "微积分包含极限理论",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 45,
+      "start": "N016:数列极限",
+      "end": "N003:区间表示",
+      "description": "微积分包含连续性",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 46,
+      "start": "N016:数列极限",
+      "end": "N004:函数相等性判断",
+      "description": "微积分包含导数",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 47,
+      "start": "N016:数列极限",
+      "end": "N005:函数定义域求解",
+      "description": "微积分包含微分",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 48,
+      "start": "N016:数列极限",
+      "end": "N006:分段函数",
+      "description": "微积分包含积分",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 50,
+      "start": "N017:收敛发散判断",
+      "end": "N024:洛必达法则",
+      "description": "数列极限支撑极限计算",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 54,
+      "start": "N019:无穷小量",
+      "end": "N017:收敛发散判断",
+      "description": "数列通项是数列极限的基础",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 55,
+      "start": "N020:无穷大量",
+      "end": "N002:绝对值不等式",
+      "description": "极限定义极限概念",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 56,
+      "start": "N021:无穷小量阶比较",
+      "end": "N022:极限计算",
+      "description": "无穷小量与无穷大量互为倒数关系",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 57,
+      "start": "N021:无穷小量阶比较",
+      "end": "N023:重要极限",
+      "description": "无穷小量需要进行阶的比较",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 58,
+      "start": "N022:极限计算",
+      "end": "N021:无穷小量阶比较",
+      "description": "无穷大量与无穷小量互为倒数关系",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 60,
+      "start": "N024:洛必达法则",
+      "end": "N002:绝对值不等式",
+      "description": "极限计算应用极限概念",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 62,
+      "start": "N024:洛必达法则",
+      "end": "N026:间断点分类",
+      "description": "极限计算应用三角函数极限",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 63,
+      "start": "N024:洛必达法则",
+      "end": "N027:零点定理",
+      "description": "极限计算应用重要极限",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 64,
+      "start": "N024:洛必达法则",
+      "end": "N028:夹逼定理",
+      "description": "极限计算应用幂指函数极限",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 70,
+      "start": "N026:间断点分类",
+      "end": "N024:洛必达法则",
+      "description": "三角函数极限属于极限计算",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 71,
+      "start": "N027:零点定理",
+      "end": "N024:洛必达法则",
+      "description": "重要极限属于极限计算",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 72,
+      "start": "N028:夹逼定理",
+      "end": "N024:洛必达法则",
+      "description": "幂指函数极限属于极限计算",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 73,
+      "start": "N029:数列通项",
+      "end": "N009:函数单调性",
+      "description": "洛必达法则属于极限计算工具",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 77,
+      "start": "N033:复合函数极限",
+      "end": "N024:洛必达法则",
+      "description": "取对数法是一种极限计算方法",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 78,
+      "start": "N034:取对数法",
+      "end": "N024:洛必达法则",
+      "description": "泰勒展开是一种极限计算方法",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 79,
+      "start": "N035:泰勒展开",
+      "end": "N026:间断点分类",
+      "description": "夹逼定理属于三角函数极限方法",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 88,
+      "start": "N039:导数的定义",
+      "end": "N049:微分的概念",
+      "description": "导数与微分通过公式 dy = f'(x)dx 紧密关联",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 89,
+      "start": "N039:导数的定义",
+      "end": "N050:罗尔定理",
+      "description": "导数存在是拉格朗日中值定理成立的前提",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 90,
+      "start": "N039:导数的定义",
+      "end": "N053:洛必达法则",
+      "description": "一阶导数的符号用于判定函数的单调性",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 92,
+      "start": "N042:和、差、积、商求导法则",
+      "end": "N039:导数的定义",
+      "description": "和差积商求导法则是计算导数的基本运算法则",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 93,
+      "start": "N044:复合函数求导法则 (链式法则)",
+      "end": "N039:导数的定义",
+      "description": "复合函数求导法则（链式法则）是求导的核心技术",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 109,
+      "start": "N067:定积分的概念与性质",
+      "end": "N074:定积分的应用",
+      "description": "定积分应用依赖定积分性质与定义",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 114,
+      "start": "N072:定积分的几何意义",
+      "end": "N067:定积分的概念与性质",
+      "description": "定积分几何意义属于定积分解释体系",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 115,
+      "start": "N073:定积分的基本性质",
+      "end": "N067:定积分的概念与性质",
+      "description": "定积分基本性质基于定积分定义",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 121,
+      "start": "N080:几何级数（等比级数）",
+      "end": "N079:常数项级数的概念",
+      "description": "几何级数属于常数项级数的一种",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    },
+    {
+      "row": 135,
+      "start": "N097:空间中两点之间的距离",
+      "end": "N095:空间直角坐标系与空间的点",
+      "description": "两点之间距离公式基于空间直角坐标系",
+      "status": "POSSIBLE_MISMATCH_REVIEW_REQUIRED"
+    }
+  ],
+  "limit_question_ids_by_text": [
+    "T074",
+    "T075",
+    "T099",
+    "T100",
+    "T101",
+    "T102",
+    "T103",
+    "T104",
+    "T105",
+    "T106",
+    "T107",
+    "T108",
+    "T109",
+    "T110",
+    "T221",
+    "T222",
+    "T223",
+    "T224",
+    "T308",
+    "T309",
+    "T316",
+    "T317",
+    "T318",
+    "T319",
+    "T320",
+    "T321",
+    "T322",
+    "T323",
+    "T324",
+    "T325",
+    "T326",
+    "T327",
+    "T328",
+    "T329",
+    "T330",
+    "T331"
+  ],
+  "source_workbook": {
+    "path": "D:\\ai4math\\eduagent\\教材知识图谱高数D.xlsx",
+    "sha256": "b8722df8c585781ae1bf1f0024feea5601dc1fde05296f15bb570c72e5875daf"
+  }
+}

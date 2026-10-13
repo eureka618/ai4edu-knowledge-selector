@@ -1,0 +1,68 @@
+[
+  {
+    "case_id": "Q01",
+    "solution_id": "S1",
+    "system_level": "L1",
+    "solution_mathematically_correct": null,
+    "all_direct_dependencies_identified": null,
+    "dependency_mapping_correct": null,
+    "actually_within_student_scope": null,
+    "reviewer": null,
+    "notes": ""
+  },
+  {
+    "case_id": "Q01",
+    "solution_id": "S2",
+    "system_level": "L4",
+    "solution_mathematically_correct": null,
+    "all_direct_dependencies_identified": null,
+    "dependency_mapping_correct": null,
+    "actually_within_student_scope": null,
+    "reviewer": null,
+    "notes": ""
+  },
+  {
+    "case_id": "Q02",
+    "solution_id": "S1",
+    "system_level": "L3",
+    "solution_mathematically_correct": null,
+    "all_direct_dependencies_identified": null,
+    "dependency_mapping_correct": null,
+    "actually_within_student_scope": null,
+    "reviewer": null,
+    "notes": ""
+  },
+  {
+    "case_id": "Q02",
+    "solution_id": "S2",
+    "system_level": "L4",
+    "solution_mathematically_correct": null,
+    "all_direct_dependencies_identified": null,
+    "dependency_mapping_correct": null,
+    "actually_within_student_scope": null,
+    "reviewer": null,
+    "notes": ""
+  },
+  {
+    "case_id": "Q03",
+    "solution_id": "S1",
+    "system_level": "L1",
+    "solution_mathematically_correct": null,
+    "all_direct_dependencies_identified": null,
+    "dependency_mapping_correct": null,
+    "actually_within_student_scope": null,
+    "reviewer": null,
+    "notes": ""
+  },
+  {
+    "case_id": "Q03",
+    "solution_id": "S2",
+    "system_level": "L3",
+    "solution_mathematically_correct": null,
+    "all_direct_dependencies_identified": null,
+    "dependency_mapping_correct": null,
+    "actually_within_student_scope": null,
+    "reviewer": null,
+    "notes": ""
+  }
+]

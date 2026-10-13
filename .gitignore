@@ -1,0 +1,43 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*secret*
+*credentials*
+
+# Python environments and caches
+.venv/
+venv/
+env/
+ENV/
+.python-version
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.deps/
+
+# IDE and OS files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Local/build/temp outputs. Keep reviewed mock artifacts only.
+outputs/*
+!outputs/mock/
+!outputs/mock/**
+*.tmp
+*.temp
+*.log
+dist/
+build/
+*.egg-info/
